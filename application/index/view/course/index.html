@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="__STATIC__/css/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<table class="table table-bordered table-hover">
+				<tr>
+					<th>课程ID</th>
+					<th>课程名</th>
+				</tr>
+				{volist name="courses" id="cou" key="key"}
+				<tr>
+					<td>{$cou.id}</td>
+					<td>{$cou.name}</td>
+				</tr>
+				{/volist}
+			</table>
+			{$courses->render()}
+		</div>
+	</div>
+</div>
+	
+</body>
+</html>
